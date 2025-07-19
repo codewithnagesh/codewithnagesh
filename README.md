@@ -1,6 +1,4 @@
-Here's a polished and well-formatted version of your introduction, optimized for readability and presentation — ideal for platforms like Upwork, LinkedIn, or personal portfolio:
 
----
 
 ## 👋 Hello, I'm Nagesh
 
