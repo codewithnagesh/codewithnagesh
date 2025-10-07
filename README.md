@@ -1,51 +1,140 @@
 
 
-## 👋 Hello, I'm Nagesh
+---
 
-I'm a **full-stack web developer** with **\$150K+ delivered on Upwork** across just 3 major projects — all built with **care, speed, and scalability** in mind.
+# 👋 Hi, I’m Nagesh
 
-### 🛠️ I specialize in:
+![Laravel](https://img.shields.io/badge/Laravel-12-red?style=for-the-badge\&logo=laravel) ![PHP](https://img.shields.io/badge/PHP-8+-blue?style=for-the-badge\&logo=php) ![API Security](https://img.shields.io/badge/API-Security-green?style=for-the-badge) ![Queue Jobs](https://img.shields.io/badge/Queue-Jobs-yellow?style=for-the-badge) ![Clean Code](https://img.shields.io/badge/Clean-Code-purple?style=for-the-badge)
 
-* 🧠 **Laravel** backends — clean, testable architecture using Eloquent, Queues, Policies
-* ⚛️ Frontend UI/UX — **React**, **Vue**, and **Inertia.js**
-* 🐳 DevOps — **Docker**, CI/CD, and **AWS deployments**
-* 🔌 API Integrations — Stripe, Twilio, Firebase, REST/GraphQL
-* 🧹 Debugging, refactoring, and scaling real-world apps
+I’m a **Laravel 12** and **PHP 8+ specialist** with **8+ years** of experience building **clean, scalable, secure, and maintainable applications**.
+
+Over time, I’ve noticed **small but critical details most developers miss** — things that can cause **performance issues**, **security gaps**, or make **testing harder**.
+
+**𝗜 𝗳𝗼𝗰𝘂𝘀 𝗼𝗻 𝘄𝗵𝗮𝘁 𝗺𝗮𝗻𝘆 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿𝘀 𝗼𝘃𝗲𝗿𝗹𝗼𝗼𝗸:** writing modular code with **Repository / Service / Facade patterns**, preventing **N+1 query issues**, handling **background jobs ⏱️**, and enforcing **API & service-level authentication & authorization 🔐**.
+
+I structure applications using **layered architecture**:
+**Request → Controller → Action → Service → Repository → Resource**
+This ensures **readability**, **testability**, and long-term **maintainability**, while optimizing ORM queries, building robust APIs, and ensuring smooth integrations.
 
 ---
 
-### 🚀 Recent Projects
+## ⚡ Key Skills
 
-* 🔗 [**ClearMortgageCapital**](https://clearmortgagecapital.com) – Laravel + Vue SaaS for a real estate financing firm
-* 🔗 [**Live Like A German**](https://live-like-a-german.com) – Legacy PHP refactor into a modern stack
-* 🔗 [**Boom.tv**](https://boom.tv) – Data pipelines and frontend logic for a stream platform
-
----
-
-### 🧰 Tech Stack
-
-**Laravel** · PHP · **Vue.js** · **React** · MySQL · AWS · Docker · Stripe · CI/CD
+* **Laravel 12 / PHP 8+** expert 🏆
+* **Clean Architecture & Design Patterns:** Repository, Service, Facade 🧩
+* **API & Service Level Authentication/Authorization** 🔐
+* **Queue Jobs & Background Processing** ⏱️
+* **ORM Optimization / N+1 Query Prevention** 🔍
+* **Layered Application Structure for Maintainability** 🏗️
+* **API Documentation & Integration** 📄
 
 ---
 
-📫 **Looking to build something reliable, fast, and future-proof?** Let’s connect.
+## 💡 Real-World Examples
+
+### 1️⃣ Clean Dependency Injection using Modern PHP Syntax 🧩
+
+```php
+class UserService {
+    public function __construct(protected UserRepository $repo) {}
+
+    public function deactivate(User $user): void {
+        $this->repo->update($user->id, ['active' => false]);
+    }
+}
+```
+
+**Benefit:** Simplifies code, enforces type safety, and makes dependency management cleaner — improving maintainability and reducing coupling.
 
 ---
 
-# 💻 Tech Stack:
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+### 2️⃣ Repository Pattern for Scalable Data Handling 📦
 
-# 📊 GitHub Stats:
+```php
+interface UserRepositoryInterface {
+    public function find(int $id): ?User;
+    public function update(int $id, array $data): bool;
+}
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=nageshpinjarkar-svg" alt="nageshpinjarkar-svg" /></a> </p>
+class UserRepository implements UserRepositoryInterface {
+    public function find(int $id): ?User {
+        return User::find($id);
+    }
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=nageshpinjarkar-svg&show_icons=true&locale=en&layout=compact" alt="nageshpinjarkar-svg" /></p>
+    public function update(int $id, array $data): bool {
+        return User::where('id', $id)->update($data);
+    }
+}
+```
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=nageshpinjarkar-svg&show_icons=true&locale=en" alt="nageshpinjarkar-svg" /></p>
+**Benefit:** Keeps business and database logic separate, making the application modular and easier to maintain or switch between data sources.
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=nageshpinjarkar-svg&" alt="nageshpinjarkar-svg" /></p>
+---
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=nageshpinjarkar-svg&label=Profile%20views&color=0e75b6&style=flat" alt="nageshpinjarkar-svg" /> </p>
+### 3️⃣ Queue Jobs for Background Processing ⏱️
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+```php
+ProcessEmail::dispatch($user)->delay(now()->addMinutes(5));
+```
+
+**Benefit:** Keeps APIs fast and responsive while moving heavy tasks like emails and notifications to background workers.
+
+---
+
+### 4️⃣ ORM Optimization to Prevent N+1 Query Problems 🔍
+
+```php
+$orders = Order::with(['user', 'products'])->get();
+```
+
+**Benefit:** Reduces database load and improves performance by minimizing redundant queries.
+
+---
+
+### 5️⃣ Authentication & Authorization at API and Data Levels 🔐
+
+```php
+// Sanctum API authentication
+Route::middleware('auth:sanctum')->get('/profile', function (Request $request) {
+    return $request->user();
+});
+
+// Policy-based authorization
+if ($user->can('update', $post)) {
+    $post->update(['title' => 'Updated Title']);
+}
+```
+
+**Benefit:** Strengthens security at both API and ORM levels, ensuring proper access control across all layers.
+
+---
+
+### 6️⃣ Layered Architecture for Maintainability 🏗️
+
+**Structure:** Request → Controller → Action → Service → Repository → Resource
+
+**Benefit:** Enhances readability, testability, and scalability by organizing business logic clearly and reducing tight coupling.
+
+---
+
+## 🚀 What Others Miss — And The Advantage ⚡
+
+Most developers skip these finer details in the rush to deliver features.
+But they’re what make the real difference:
+
+* Fewer bugs ✅
+* Faster scaling ⚡
+* Easier onboarding for new developers 👨‍💻
+* Smoother CI/CD deployments 📦
+
+It’s the difference between code that just **works** and code that **lasts**.
+
+---
+
+## 🔗 Connect with me
+
+* [Upwork Profile] [https://www.upwork.com/freelancers/~014aa803c2d342716f?viewMode=1](url)
+  
+
+---
+
