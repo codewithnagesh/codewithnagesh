@@ -6,7 +6,7 @@
 
 ![Laravel](https://img.shields.io/badge/Laravel-12-red?style=for-the-badge\&logo=laravel) ![PHP](https://img.shields.io/badge/PHP-8+-blue?style=for-the-badge\&logo=php) ![API Security](https://img.shields.io/badge/API-Security-green?style=for-the-badge) ![Queue Jobs](https://img.shields.io/badge/Queue-Jobs-yellow?style=for-the-badge) ![Clean Code](https://img.shields.io/badge/Clean-Code-purple?style=for-the-badge)
 
-I’m a **Laravel 12** and **PHP 8+ specialist** with **8+ years** of experience building **clean, scalable, secure, and maintainable applications**.
+I’m a **Laravel 12** and **PHP 8+ specialist** with **8+ years** of experience building **clean, scalable, secure, and maintainable applications, with a growing focus on Python development and AI-powered solutions.**.
 
 Over time, I’ve noticed **small but critical details most developers miss** — things that can cause **performance issues**, **security gaps**, or make **testing harder**.
 
@@ -21,6 +21,8 @@ This ensures **readability**, **testability**, and long-term **maintainability**
 ## ⚡ Key Skills
 
 * **Laravel 12 / PHP 8+** expert 🏆
+* **Python Development** Python fundamentals, scripting, automation, backend integrations 🏆
+* **AI Engineering** LLM integration, AI-powered APIs, prompt engineering 🏆
 * **Clean Architecture & Design Patterns:** Repository, Service, Facade 🧩
 * **API & Service Level Authentication/Authorization** 🔐
 * **Queue Jobs & Background Processing** ⏱️
