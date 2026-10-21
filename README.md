@@ -4,7 +4,7 @@
 
 # 👋 Hi, I’m Nagesh
 
-![Laravel](https://img.shields.io/badge/Laravel-12-red?style=for-the-badge\&logo=laravel) ![Python](https://img.shields.io/pypi/pyversions/emd) ![PHP](https://img.shields.io/badge/PHP-8+-blue?style=for-the-badge\&logo=php) ![API Security](https://img.shields.io/badge/API-Security-green?style=for-the-badge) ![Queue Jobs](https://img.shields.io/badge/Queue-Jobs-yellow?style=for-the-badge) ![Clean Code](https://img.shields.io/badge/Clean-Code-purple?style=for-the-badge)
+![Laravel](https://img.shields.io/badge/Laravel-12-red?style=for-the-badge\&logo=laravel) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=claude&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-8+-blue?style=for-the-badge\&logo=php) ![API Security](https://img.shields.io/badge/API-Security-green?style=for-the-badge) ![Queue Jobs](https://img.shields.io/badge/Queue-Jobs-yellow?style=for-the-badge) ![Clean Code](https://img.shields.io/badge/Clean-Code-purple?style=for-the-badge)
 
 I’m a **Laravel 12** and **PHP 8+ specialist** with **8+ years** of experience building **clean, scalable, secure, and maintainable applications, with a growing focus on Python development and AI-powered solutions.**.
 
