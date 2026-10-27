@@ -34,66 +34,59 @@ This ensures **readability**, **testability**, and long-term **maintainability**
 
 ## 💡 Real-World Examples
 
-### 1️⃣ Clean Dependency Injection using Modern PHP Syntax 🧩
+### 1️⃣ Calling LLM to summaries the video for RAG answers 🧩
 
-```php
-class UserService {
-    public function __construct(protected UserRepository $repo) {}
-
-    public function deactivate(User $user): void {
-        $this->repo->update($user->id, ['active' => false]);
-    }
-}
+```python
+def gemini_chat_model(self):
+        """Builds Google Gemini chat client.
+        
+        Temperature is set to 0 for deterministic, factual summaries and RAG answers.
+        """
+        return ChatGoogleGenerativeAI(
+            model=self.__chat_model,
+            temperature=0,
+            max_output_tokens=None,
+            timeout=None,
+            max_retries=2,
+        )
 ```
 
 **Benefit:** Simplifies code, enforces type safety, and makes dependency management cleaner — improving maintainability and reducing coupling.
 
 ---
 
-### 2️⃣ Repository Pattern for Scalable Data Handling 📦
+### 2️⃣ Prompt Engineering in an AI-Powered MCP Assistant 📦
 
-```php
-interface UserRepositoryInterface {
-    public function find(int $id): ?User;
-    public function update(int $id, array $data): bool;
-}
+```python
+async def ask_question(self, state: MainState):
+        """Invokes the AI agent with database tools to generate a verified answer."""
+        messages = tool_calls = []
+        messages.append(
+            SystemMessage(
+                content="""You are an MCP database assistant. Answer database queries through MCP tools.
 
-class UserRepository implements UserRepositoryInterface {
-    public function find(int $id): ?User {
-        return User::find($id);
-    }
+                    Common Tables & Key Columns:
+                        - `employees`: id, code, first_name, last_name, email, role, status
+                        - `users`: id, full_name, email, is_active, is_verified
+                        - For other tables, discover them using `get_table_names` and `get_fields`.
 
-    public function update(int $id, array $data): bool {
-        return User::where('id', $id)->update($data);
-    }
-}
+                    Query & Token Optimization Rules:
+                        - Casual messages (hi, hello, etc.) → respond naturally without database tools.
+                        - When querying wide tables (especially `employees`), ALWAYS specify only the relevant summary 
+                        - For general listing requests, fetch a single page (limit=10 to 15)
+                        - Never assume or invent tables, fields, records, or values.
+                        - Only use tables and fields confirmed by tool results.
+                        - Respond concisely in clean Markdown with relevant emojis.
+                """
+            )
+        )
 ```
 
 **Benefit:** Keeps business and database logic separate, making the application modular and easier to maintain or switch between data sources.
 
 ---
 
-### 3️⃣ Queue Jobs for Background Processing ⏱️
-
-```php
-ProcessEmail::dispatch($user)->delay(now()->addMinutes(5));
-```
-
-**Benefit:** Keeps APIs fast and responsive while moving heavy tasks like emails and notifications to background workers.
-
----
-
-### 4️⃣ ORM Optimization to Prevent N+1 Query Problems 🔍
-
-```php
-$orders = Order::with(['user', 'products'])->get();
-```
-
-**Benefit:** Reduces database load and improves performance by minimizing redundant queries.
-
----
-
-### 5️⃣ Authentication & Authorization at API and Data Levels 🔐
+### 3️⃣ Authentication & Authorization at API and Data Levels 🔐
 
 ```php
 // Sanctum API authentication
@@ -111,7 +104,7 @@ if ($user->can('update', $post)) {
 
 ---
 
-### 6️⃣ Layered Architecture for Maintainability 🏗️
+### 4️⃣ Layered Architecture for Maintainability 🏗️
 
 **Structure:** Request → Controller → Action → Service → Repository → Resource
 
